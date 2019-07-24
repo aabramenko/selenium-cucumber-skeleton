@@ -5,7 +5,7 @@ simple way: ```mvn test```
 
 run with parameters:
 
-```mvn test -Drun_config=run_config_file -Denv_config=env_config_file -Dbrowser=chrome -Dheadless=true -Dsuite=suitefile.xml -Ddb_config=db_config_file -Dcreds=creds_file```
+```mvn test -Drun_config=run_config_file -Denv_config=env_config_file -Dbrowser=chrome -Dheadless=true -Dsuite=suitefile.xml -Ddb_config=db_config_file -Dcreds=creds_file -Dgrid=true -Dselenoid=true```
 
 where:
 
@@ -54,6 +54,17 @@ Default value: db_config_main.conf
 Default value: creds_main.conf
 
 ---------------
+
+-Dgrid=true: set the parameter value to "true" if you would like to execute tests against selenium Grid; selenium Grid hub and nodes should be launched before your tests run
+
+Default value: defined in the run_config file
+
+---------------
+
+-Dselenoid=true: set the parameter value to "true" if you would like to execute tests inside selenoid docker container; the container should be launched before your tests run
+
+Default value: defined in the run_config file
+
 
 Reporting:
 ==========
