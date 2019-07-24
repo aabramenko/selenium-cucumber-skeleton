@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="BDD Tests" verbose="1" parallel="tests" thread-count="1">
-    <test name="BDD test suite" annotations="JDK" preserve-order="true">
+<suite name="Cucumber Tests" verbose="1">
+    <test name="cucumber test suite">
         <classes>
             <class name="project.Runner" />
         </classes>
