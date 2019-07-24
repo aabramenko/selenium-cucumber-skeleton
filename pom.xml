@@ -8,6 +8,14 @@
     <artifactId>selenium-cucumber-skeleton</artifactId>
     <version>1.0-SNAPSHOT</version>
 
+    <developers>
+        <developer>
+            <id>aabramenko</id>
+            <name>Aleksei Abramenko</name>
+            <email>abramenko.alexey@gmail.com</email>
+        </developer>
+    </developers>
+
     <properties>
         <project.buiild.sourceEncoding>UTF-8</project.buiild.sourceEncoding>
         <aspectj.version>1.9.4</aspectj.version>
