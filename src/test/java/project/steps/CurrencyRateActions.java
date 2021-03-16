@@ -11,6 +11,7 @@ public class CurrencyRateActions extends CommonActions {
 
     GoogleSearchPage searchPage;
     GoogleResultsPage resultsPage;
+    double delta = 0.05;
 
     @Given("^I as not logged in user open search page$")
     public void iAsNotLoggedInUserOpenSearchPage() {
@@ -22,14 +23,13 @@ public class CurrencyRateActions extends CommonActions {
         String amountFromGoogle = resultsPage.getConverterAreaAmountToText();
         String amountFromBank = getCurrencyAmountFromBank(currencyTo);
 
-        Assert.assertEquals(
-                amountFromGoogle,
-                amountFromBank,
-                "Rate of " + currencyTo
+        Assert.assertTrue(
+                Math.abs(Double.parseDouble(amountFromGoogle) - Double.parseDouble(amountFromBank)) <= delta,
+                "Rate of " + amountFromGoogle + " and " + amountFromBank + " are not the same"
         );
     }
 
-    @When("I on search page submit {string} {string}")
+    @When("I on search page submit {string}{string}")
     public void iOnSearchPageSubmit(
             String baseText, String currencyTo
     ) {

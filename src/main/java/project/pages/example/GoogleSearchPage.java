@@ -42,7 +42,6 @@ public class GoogleSearchPage extends AbstractPage {
         log.info("search: " + text);
         searchLine.sendKeys(text);
         searchLine.submit();
-        waitUntilDisplayed(By.xpath(GoogleResultsPageLocators.FIRST_RESULT), 5);
         return new GoogleResultsPage(getDriver());
     }
 

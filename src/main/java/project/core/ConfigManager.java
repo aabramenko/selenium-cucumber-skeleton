@@ -16,19 +16,7 @@ public class ConfigManager {
     private static Config envConfig;
     private static Config dbConfig;
 
-    public static Config getRunConfig() {
-        return runConfig;
-    }
-
-    public static Config getDbConfig() {
-        return dbConfig;
-    }
-
-    public static Config getEnvConfig() {
-        return envConfig;
-    }
-
-    public static void uploadRunConfigValues() {
+    public static void uploadRunConfigParameters() {
         log.info("uploading run config parameters");
         String valFromSystem = System.getProperty("run_config");
         String configFileName = "run_config_main";
@@ -39,7 +27,7 @@ public class ConfigManager {
         runConfig = ConfigFactory.load(configFileName);
     }
 
-    public static void uploadDbConfigValues() {
+    public static void uploadDbConfigParameters() {
         log.info("uploading db configs");
         String valFromSystem = System.getProperty("db_config");
         String configFileName = "db_config_main";
@@ -50,7 +38,7 @@ public class ConfigManager {
         dbConfig = ConfigFactory.load(configFileName);
     }
 
-    public static void uploadEnvConfigValues() {
+    public static void uploadEnvConfigParameters() {
         log.info("uploading environment config parameters");
         String valFromSystem = System.getProperty("env_config");
         String configFileName = "env_config_main";

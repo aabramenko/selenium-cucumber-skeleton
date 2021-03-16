@@ -9,7 +9,8 @@ import project.steps.AbstractSteps;
 @CucumberOptions(
     features = { "src/test/resources/features" },
     glue = {"project/steps"},
-    tags = {"@Rate or @Login"},
+    //tags = {"@Rate or @Login"},
+    tags = {"@Rate"},
     plugin = {
             "pretty",
             "html:target/cucumber-reports/cucumber-pretty",

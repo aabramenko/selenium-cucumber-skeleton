@@ -32,9 +32,9 @@ public abstract class AbstractSteps extends AbstractTestNGCucumberTests {
         System.setProperty("org.uncommons.reportng.escape-output", "false");
 
         RunTimeDataStorage.DriverStorage.initializeDMap();
-        ConfigManager.uploadRunConfigValues();
-        ConfigManager.uploadEnvConfigValues();
-        ConfigManager.uploadDbConfigValues();
+        ConfigManager.uploadRunConfigParameters();
+        ConfigManager.uploadEnvConfigParameters();
+        ConfigManager.uploadDbConfigParameters();
         CredsManager.uploadCredsValues();
 
         deleteTempFiles();
