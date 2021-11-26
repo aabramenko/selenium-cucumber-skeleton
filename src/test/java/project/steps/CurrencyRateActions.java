@@ -11,7 +11,7 @@ public class CurrencyRateActions extends CommonActions {
 
     GoogleSearchPage searchPage;
     GoogleResultsPage resultsPage;
-    double delta = 0.05;
+    double delta = 1.0;
 
     @Given("^I as not logged in user open search page$")
     public void iAsNotLoggedInUserOpenSearchPage() {

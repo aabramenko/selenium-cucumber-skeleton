@@ -1,7 +1,7 @@
 How to run:
 ===========
 
-```mvn test -Dbrowser=chrome -Dheadless=true -Dsuite=example.xml```
+`mvn test -Dbrowser=chrome -Dheadless=true -Dsuite=example.xml`
 
 Reporting:
 ==========
@@ -16,7 +16,7 @@ This report is generated automatically after each maven run.
 
 Run the following command in order to generate the advanced report: 
 
-```mvn verify -DskipTests=true``` 
+`mvn verify -DskipTests=true` 
 
 All reports are saved in the "target" folder.
 
